@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 342807361}
   - component: {fileID: 342807366}
   - component: {fileID: 342807365}
-  - component: {fileID: 342807364}
+  - component: {fileID: 342807367}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -209,24 +209,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 45, y: 45, z: 0}
---- !u!114 &342807364
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 342807359}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 205b80cb4ba8bda43b720e7cc184f853, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  raycastDensity: 5
-  useOverrideDensity: 0
-  useOverrideVariation: 0
-  debug: 0
-  overrideAirDensity: 1.225
-  overrideDensityVariation: 0.5
 --- !u!54 &342807365
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -237,7 +219,7 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 25
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
@@ -257,6 +239,20 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &342807367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342807359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7322c09d94061840903f0b57498cf2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cd: 0.82
+  mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -546,7 +542,7 @@ GameObject:
   - component: {fileID: 1532708750}
   - component: {fileID: 1532708749}
   - component: {fileID: 1532708754}
-  - component: {fileID: 1532708753}
+  - component: {fileID: 1532708755}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -625,31 +621,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1532708748}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 25, z: 0}
-  m_LocalScale: {x: 5, y: 0.25, z: 5}
+  m_LocalPosition: {x: 0, y: 10, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1532708753
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1532708748}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 205b80cb4ba8bda43b720e7cc184f853, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  raycastDensity: 1
-  useOverrideDensity: 0
-  useOverrideVariation: 1
-  debug: 0
-  overrideAirDensity: 1.225
-  overrideDensityVariation: 1
 --- !u!54 &1532708754
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -658,14 +636,28 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1532708748}
   serializedVersion: 2
-  m_Mass: 50
+  m_Mass: 100
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1532708755
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1532708748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7322c09d94061840903f0b57498cf2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cd: 1.05
+  mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1858363385
 GameObject:
   m_ObjectHideFlags: 0
@@ -679,7 +671,7 @@ GameObject:
   - component: {fileID: 1858363387}
   - component: {fileID: 1858363386}
   - component: {fileID: 1858363391}
-  - component: {fileID: 1858363390}
+  - component: {fileID: 1858363392}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -765,24 +757,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1858363390
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1858363385}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 205b80cb4ba8bda43b720e7cc184f853, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  raycastDensity: 5
-  useOverrideDensity: 0
-  useOverrideVariation: 0
-  debug: 0
-  overrideAirDensity: 1.225
-  overrideDensityVariation: 0.5
 --- !u!54 &1858363391
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -791,11 +765,25 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1858363385}
   serializedVersion: 2
-  m_Mass: 1
+  m_Mass: 5
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 0
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1858363392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1858363385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7322c09d94061840903f0b57498cf2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cd: 0.47
+  mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
